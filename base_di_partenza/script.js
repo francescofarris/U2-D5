@@ -12,3 +12,9 @@ document.addEventListener("scroll", function() {
         getStarted.classList.remove("scrolled");
     }
 });
+
+// Animazione delle "M"
+setInterval(() => {
+    let mElement = document.querySelector(".m-animate");
+    mElement.style.transform = `translateY(${Math.random() * 10}px)`;
+}, 500);

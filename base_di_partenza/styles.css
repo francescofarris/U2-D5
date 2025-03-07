@@ -1,4 +1,5 @@
 /* Import Google Fonts */
+/* Import Google Fonts */
 body {
     font-family: 'Spectral', serif;
     margin: 0;
@@ -12,6 +13,10 @@ body {
     align-items: center;
     padding: 20px;
     background-color: #ffc017;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -34,8 +39,9 @@ body {
 /* Hero Section */
 .hero {
     background-color: #ffc017;
-    padding: 50px;
+    padding: 100px 50px;
     text-align: center;
+    margin-top: 70px;
 }
 
 .hero h1 {
@@ -55,6 +61,23 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+/* M Animation */
+.m-hero {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.m-animate {
+    width: 50px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
 }
 
 /* Trending Section */
@@ -79,9 +102,8 @@ article {
     gap: 15px;
 }
 
-article span {
-    font-size: 20px;
-    font-weight: bold;
+article img {
+    width: 30px;
 }
 
 .get-started {
@@ -95,4 +117,15 @@ article span {
 
 .get-started.scrolled {
     background-color: #1a8917;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 30px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
 }
